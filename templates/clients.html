@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Gestion des Clients</h2>
+
+<form method="POST" class="row g-3 mb-4">
+    <div class="col-md-4">
+        <input type="text" name="name" class="form-control" placeholder="Nom complet" required>
+    </div>
+    <div class="col-md-4">
+        <input type="text" name="phone" class="form-control" placeholder="Téléphone">
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-success">Ajouter</button>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Nom</th>
+            <th>Téléphone</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client.name }}</td>
+            <td>{{ client.phone }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Réservations</h2>
+
+<form method="POST" class="row g-3 mb-4">
+    <div class="col-md-3">
+        <select name="client_id" class="form-control" required>
+            {% for client in clients %}
+            <option value="{{ client.id }}">{{ client.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="col-md-3">
+        <select name="room_id" class="form-control" required>
+            {% for room in rooms %}
+            <option value="{{ room.id }}">{{ room.number }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="col-md-2">
+        <input type="date" name="checkin" class="form-control" required>
+    </div>
+
+    <div class="col-md-2">
+        <input type="date" name="checkout" class="form-control" required>
+    </div>
+
+    <div class="col-md-2">
+        <button class="btn btn-warning">Réserver</button>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Client</th>
+            <th>Chambre</th>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th>Facture</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.client_name }}</td>
+            <td>{{ booking.room_number }}</td>
+            <td>{{ booking.checkin }}</td>
+            <td>{{ booking.checkout }}</td>
+            <td>
+                <a href="{{ url_for('invoice', booking_id=booking.id) }}" class="btn btn-sm btn-dark">
+                    PDF
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

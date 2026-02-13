@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+    <div class="card p-4 shadow" style="width: 400px;">
+
+        <div class="text-center mb-4">
+            <img src="{{ url_for('static', filename='logo.png') }}" height="80">
+            <h4 class="mt-2">HotelDeskPro</h4>
+            <p class="text-muted">Connexion sécurisée</p>
+        </div>
+
+        <form method="POST">
+            <div class="mb-3">
+                <label>Nom d'utilisateur</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label>Mot de passe</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

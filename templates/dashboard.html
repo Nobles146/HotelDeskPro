@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Tableau de bord</h2>
+<br>
+
+<div class="row">
+
+    <div class="col-md-3">
+        <div class="card-box bg-primary text-center">
+            <h5>🛏 Chambres totales</h5>
+            <h2>{{ total_rooms }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-box bg-danger text-center">
+            <h5>🏨 Occupées</h5>
+            <h2>{{ occupied }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-box bg-success text-center">
+            <h5>✅ Disponibles</h5>
+            <h2>{{ available }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card-box bg-warning text-center">
+            <h5>💰 Revenus</h5>
+            <h2>{{ revenue }} $</h2>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

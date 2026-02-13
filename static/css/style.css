@@ -1,0 +1,69 @@
+/* ===== Couleurs principales ===== */
+:root {
+    --primary-color: #1e7e34;     /* Vert principal */
+    --dark-color: #0f2d1f;        /* Vert très foncé */
+    --light-bg: #f3f7f4;          /* Fond léger */
+    --accent-color: #28a745;      /* Vert bouton */
+}
+
+/* ===== Fond général ===== */
+body {
+    background-color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    background-color: var(--dark-color);
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar h4 {
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar img {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 12px;
+    color: #cfe8d5;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ===== Cards ===== */
+.card {
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== Boutons ===== */
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+/* ===== Dashboard numbers ===== */
+.dashboard-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+}
