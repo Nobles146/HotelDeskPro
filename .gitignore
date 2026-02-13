@@ -1,0 +1,7 @@
+build/
+dist/
+backups/
+*.db
+*.exe
+_pycache_/
+*.pyc
