@@ -1,7 +1,18 @@
-build/
-dist/
-backups/
+# Fichiers de build
+/build/
+/dist/
+
+# Base de données et backups
 *.db
-*.exe
-_pycache_/
+/backups/
+
+# Fichiers Python compilés
 *.pyc
+_pycache_/
+
+# Fichiers PyInstaller
+*.spec
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
